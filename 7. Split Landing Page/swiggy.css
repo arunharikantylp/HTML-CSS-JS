@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Gudea:ital@1&family=Lora&family=Permanent+Marker&family=Roboto:ital,wght@1,100;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(to right, #46e9fb, #46e9fb);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  height: 500px;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 150px;
+  background-color: #46e9fb;
+  border-radius: 0 0 50% 50%;
+  z-index: 1;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: brown;
+  font-size: 50px;
+  text-align: center;
+  z-index: 2;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  padding: 20px;
+  width: 100%;
+  z-index: -2;
+}
+
+.submit {
+  width: 150px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: cornflowerblue;
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Lora";
+  cursor: pointer;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  font-family: "Lora";
+}

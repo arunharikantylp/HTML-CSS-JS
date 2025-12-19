@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Gudea:ital@1&family=Lora&family=Permanent+Marker&family=Roboto:ital,wght@1,100;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Belleza", sans-serif;
+  margin: 0;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  background-color: blanchedalmond;
+  position: relative;
+  width: 100%;
+}
+
+.split-left {
+  background-image: url("https://images.unsplash.com/photo-1653389527532-884074ac1c65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1162&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.split-right {
+  background-image: url("https://images.unsplash.com/photo-1669827014193-be4fad074832?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=398&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.split-left::after {
+  content: "";
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(-100px);
+  top: -100px;
+  left: 0;
+}
+
+.split-right::after {
+  content: "";
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translate(100px);
+  top: -100px;
+  right: 0;
+}
+
+.split-left:hover {
+  width: 70%;
+}
+
+/* + means immediately after .split-left:hover elements */
+.split-left:hover + .split-right {
+  width: 30%;
+}
+
+.split-right:hover {
+  width: 70%;
+}
+/* ~ means preceding of .split-right:hover elements */
+.split-left:right ~ .split-left {
+  width: 30%;
+}
+
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn {
+  width: 5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border: 0.2rem solid white;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  color: #000;
+  cursor: pointer;
+}
